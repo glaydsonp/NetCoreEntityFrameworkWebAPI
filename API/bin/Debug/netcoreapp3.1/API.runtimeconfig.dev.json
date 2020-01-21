@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\gprado\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\gprado\\.nuget\\packages"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+D:\code\dotnet-react-course\Reactivities\Domain\bin\Debug\netstandard2.0\Domain.deps.json
+D:\code\dotnet-react-course\Reactivities\Domain\bin\Debug\netstandard2.0\Domain.dll
+D:\code\dotnet-react-course\Reactivities\Domain\bin\Debug\netstandard2.0\Domain.pdb
+D:\code\dotnet-react-course\Reactivities\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+D:\code\dotnet-react-course\Reactivities\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+D:\code\dotnet-react-course\Reactivities\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+D:\code\dotnet-react-course\Reactivities\Domain\obj\Debug\netstandard2.0\Domain.dll
+D:\code\dotnet-react-course\Reactivities\Domain\obj\Debug\netstandard2.0\Domain.pdb

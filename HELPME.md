@@ -9,4 +9,13 @@
     * API -> App
     * Persistence -> Domain
     * dotnet add reference PATH_PROJECT
-5 - 
+5 - Add NuGet EFCore, EFCore Tools, EF Design todos na mesma versão do netcore da 
+6 - Instalar EF CLI
+    * dotnet tool install --globl dotnet-ef
+7 - Criar migration
+    * dotnet ef migrations add InicialCreate -p .\Persistence\ -s .\API\
+
+
+
+P.S: Propeties -> Data
+P.S 2: Persistence -> Services

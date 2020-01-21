@@ -1,0 +1,13 @@
+D:\code\dotnet-react-course\Reactivities\Application\bin\Debug\netstandard2.1\Application.deps.json
+D:\code\dotnet-react-course\Reactivities\Application\bin\Debug\netstandard2.1\Application.dll
+D:\code\dotnet-react-course\Reactivities\Application\bin\Debug\netstandard2.1\Application.pdb
+D:\code\dotnet-react-course\Reactivities\Application\bin\Debug\netstandard2.1\Domain.dll
+D:\code\dotnet-react-course\Reactivities\Application\bin\Debug\netstandard2.1\Persistence.dll
+D:\code\dotnet-react-course\Reactivities\Application\bin\Debug\netstandard2.1\Domain.pdb
+D:\code\dotnet-react-course\Reactivities\Application\bin\Debug\netstandard2.1\Persistence.pdb
+D:\code\dotnet-react-course\Reactivities\Application\obj\Debug\netstandard2.1\Application.csprojAssemblyReference.cache
+D:\code\dotnet-react-course\Reactivities\Application\obj\Debug\netstandard2.1\Application.AssemblyInfoInputs.cache
+D:\code\dotnet-react-course\Reactivities\Application\obj\Debug\netstandard2.1\Application.AssemblyInfo.cs
+D:\code\dotnet-react-course\Reactivities\Application\obj\Debug\netstandard2.1\Application.csproj.CopyComplete
+D:\code\dotnet-react-course\Reactivities\Application\obj\Debug\netstandard2.1\Application.dll
+D:\code\dotnet-react-course\Reactivities\Application\obj\Debug\netstandard2.1\Application.pdb
