@@ -19,11 +19,12 @@ namespace API
             var host = CreateHostBuilder(args).Build();
 
             using( var scope = host.Services.CreateScope()) {
-                var services = scope.ServiceProvider;
 
+                var services = scope.ServiceProvider;
                 try {
                     var context = services.GetRequiredService<DataContext>();
                     context.Database.Migrate();
+                    Seed.SeedData(context);
                 } catch (Exception e) {
                     var logger = services.GetRequiredService<ILogger<Program>>();
                     logger.LogError(e, "Um erro ocorreu durante a migrations.");
