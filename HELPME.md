@@ -14,6 +14,7 @@
     * dotnet tool install --globl dotnet-ef
 7 - Criar migration
     * dotnet ef migrations add InicialCreate -p .\Persistence\ -s .\API\
+    * dotnet ef database update InitialCreate -p .\Persistence\
 
 
 

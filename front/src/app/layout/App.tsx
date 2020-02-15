@@ -1,9 +1,9 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { Container } from 'semantic-ui-react';
-import axios from 'axios';
 import { IActivity } from '../models/Activity';
 import Navbar from '../../features/navbar/Navbar';
 import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard';
+import agent from '../api/agent';
 
 interface IState {
   activities: IActivity[];
@@ -19,32 +19,45 @@ const App = () => {
     setSelectedActivity(activities.filter(a => a.id === id)[0]);
     setEditMode(false);
   }
-  
+
   const handleOpenCreateForm = () => {
     setSelectedActivity(null);
     setEditMode(true);
   }
-  
+
   const handleCreateActivity = (activity: IActivity) => {
-    setActivities([...activities, activity]);
-    setSelectedActivity(activity);
+    agent.Activities.create(activity).then(
+      () => {
+        setActivities([...activities, activity]);
+        setSelectedActivity(activity);
+        setEditMode(false);
+      }
+    )
   }
-  
+
   const handleEditActivity = (activity: IActivity) => {
-    setActivities([...activities.filter(a => a.id !== activity.id), activity]);
-    setSelectedActivity(activity);
-    setEditMode(false);
+    agent.Activities.update(activity).then(
+      () => {
+        setActivities([...activities.filter(a => a.id !== activity.id), activity]);
+        setSelectedActivity(activity);
+        setEditMode(false);
+      }
+    );
   }
 
   const handleDeleteActivity = (id: string) => {
-    setActivities([...activities.filter(a => a.id !== id)]);
+    agent.Activities.delete(id).then(
+      () => {
+        setActivities([...activities.filter(a => a.id !== id)]);
+      }
+    );
   }
 
   useEffect(() => {
-    axios.get<IActivity[]>('http://localhost:5000/api/activities')
+    agent.Activities.list()
       .then(res => {
         let activities: IActivity[] = [];
-        res.data.forEach(activity => {
+        res.forEach((activity: IActivity) => {
           activity.date = activity.date.split('.')[0];
           activities.push(activity);
         });
@@ -55,18 +68,18 @@ const App = () => {
   return (
     <Fragment>
       <Navbar openCreateForm={handleOpenCreateForm} />
-      <Container style={{marginTop: '7em'}}>
-        <ActivityDashboard 
-          activities={activities} 
-          selectActivity={handleSelectActivity} 
-          selectedActivity={selectedActivity!} 
+      <Container style={{ marginTop: '7em' }}>
+        <ActivityDashboard
+          activities={activities}
+          selectActivity={handleSelectActivity}
+          selectedActivity={selectedActivity!}
           editMode={editMode}
           setEditMode={setEditMode}
           setSelectedActivity={setSelectedActivity}
           createActivity={handleCreateActivity}
           editActivity={handleEditActivity}
           deleteActivity={handleDeleteActivity}
-          />
+        />
       </Container>
     </Fragment>
   );

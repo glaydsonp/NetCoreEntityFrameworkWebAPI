@@ -37,7 +37,7 @@ const ActivityDashboard: React.FC<IProps> = ({ activities, selectActivity, selec
                 }
                 {editMode &&
                     <ActivityForm
-                        key={selectedActivity && selectedActivity.id || 0}
+                        key={selectedActivity && selectedActivity.id}
                         setEditMode={setEditMode}
                         activity={selectedActivity!}
                         editActivity={editActivity}
