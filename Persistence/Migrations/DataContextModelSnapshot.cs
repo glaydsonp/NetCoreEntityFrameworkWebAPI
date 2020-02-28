@@ -20,7 +20,7 @@ namespace Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(36)");
 
                     b.Property<string>("Category")
                         .HasColumnType("TEXT");
@@ -29,7 +29,7 @@ namespace Persistence.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Date")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(48)");
 
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
